@@ -1,0 +1,57 @@
+.header-container {
+  .burger-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+    .burger {
+      width: 50px;
+      height: 6px;
+      background-color: black;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(132, 61, 61, 1);
+      transition: all 0.5s ease-in-out;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background-color: black;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(132, 61, 61, 1);
+        transition: all 0.5s ease-in-out;
+      }
+
+      &:before {
+        transform: translateY(-16px);
+      }
+      &:after {
+        transform: translateY(16px);
+      }
+
+      &.toggled {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+
+        &:before {
+          transform: rotate(45deg) translate(35px, -35px);
+        }
+
+        &:after {
+          transform: rotate(-45deg) translate(35px, 35px);
+        }
+      }
+    }
+  }
+}
