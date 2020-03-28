@@ -1,3 +1,36 @@
 .country-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    color: #f2f4f7;
+    margin-bottom: 15px;
+  }
+
+  .stats-wrapper {
+    .confirmed {
+      margin-bottom: 10px;
+      color: #ff8f40;
+    }
+    .deaths {
+      color: #ff3333;
+      &.last {
+        margin-bottom: 10px;
+      }
+    }
+    .recovered {
+      color: #c2d94c;
+      &.last {
+        margin-bottom: 10px;
+      }
+    }
+    .active {
+      color: #ffee99;
+    }
+  }
 }
+
+// #0a0e14;
+// #f2f4f7;

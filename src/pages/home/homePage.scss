@@ -1,3 +1,84 @@
 .home-page-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    // color: #0a0e14;
+    color: #f2f4f7;
+  }
+
+  .statsWrapper {
+    display: grid;
+    grid-template-areas:
+      'confirmed . deaths'
+      '. . .'
+      'active . recovered';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr;
+    padding: 30px 30px 50px;
+    background-color: #0a0e14;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.496);
+
+    .confirmedWrapper {
+      grid-area: confirmed;
+
+      h3 {
+        color: #ff8f40;
+      }
+      span {
+        color: #ff8f40;
+      }
+    }
+
+    .deathsWrapper {
+      grid-area: deaths;
+
+      h3 {
+        color: #ff3333;
+      }
+      span {
+        color: #ff3333;
+      }
+    }
+
+    .recoveredWrapper {
+      grid-area: recovered;
+
+      h3 {
+        color: #c2d94c;
+      }
+      span {
+        color: #c2d94c;
+      }
+    }
+
+    .activeWrapper {
+      grid-area: active;
+
+      h3 {
+        color: #ffee99;
+      }
+      span {
+        color: #ffee99;
+      }
+    }
+  }
+
+  .dateWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    h5 {
+      color: #f2f4f7;
+    }
+    span {
+      color: #f2f4f7;
+    }
+  }
 }

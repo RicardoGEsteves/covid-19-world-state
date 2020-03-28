@@ -11,13 +11,15 @@
 
   .header {
     grid-area: header;
+    background-color: #0a0e14;
   }
   .content {
     grid-area: content;
-    padding-top: 100px;
+    padding: 20px;
+    background-color: #1f2430;
   }
   .footer {
     grid-area: footer;
-    background-color: green;
+    background-color: #0a0e14;
   }
 }

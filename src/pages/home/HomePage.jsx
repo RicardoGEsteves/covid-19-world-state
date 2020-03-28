@@ -21,36 +21,39 @@ const HomePage = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div>
+        <>
           <h1>Covid-19 World state</h1>
           <div>
-            <div>
-              <h3>Confirmed</h3>
-              <span>{state.confirmed.value}</span>
-            </div>
+            <div className='statsWrapper'>
+              <div className='confirmedWrapper'>
+                <h3>Confirmed</h3>
+                <span>{state.confirmed.value}</span>
+              </div>
+              <div className='deathsWrapper'>
+                <h3>Deaths</h3>
+                <span>
+                  {' '}
+                  <span>{state.deaths.value}</span>{' '}
+                </span>
+              </div>
 
-            <div>
-              <h3>Deaths</h3>
-              <span>
-                {' '}
-                <span>{state.deaths.value}</span>{' '}
-              </span>
-            </div>
+              <div className='recoveredWrapper'>
+                <h3>Recovered</h3>
+                <span>{state.recovered.value}</span>
+              </div>
 
-            <div>
-              <h3>Recovered</h3>
-              <span>{state.recovered.value}</span>
-            </div>
-
-            <div>
-              <h3>Active</h3>
-              <span>{active}</span>
+              <div className='activeWrapper'>
+                <h3>Active</h3>
+                <span>{active}</span>
+              </div>
             </div>
           </div>
-          <h5>Last Update</h5>
-          <span>Data: {formatter[0]} </span>
-          <span>Hora: {formatter[1]} </span>
-        </div>
+          <div className='dateWrapper'>
+            <h5>Last Update</h5>
+            <span>Data: {formatter[0]} </span>
+            <span>Hora: {formatter[1]} </span>
+          </div>
+        </>
       )}
     </div>
   );

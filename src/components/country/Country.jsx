@@ -14,33 +14,16 @@ const Country = ({ country, confirmed, deaths, recovered }) => {
 
   return (
     <div className='country-container'>
-      <div>
-        <div>
-          <h3>{country}</h3>
-        </div>
+      <h3>{country}</h3>
 
-        <div>
-          <div>
-            <p>Confirmed: {confirmed}</p>
-          </div>
-
-          <div>
-            <ul>
-              <li>Deaths: {deaths}</li>
-              <li>{deathsPercentage} %</li>
-            </ul>
-
-            <ul>
-              <li>Recovered: {recovered}</li>
-              <li>{recoveredPercentage} %</li>
-            </ul>
-
-            <ul>
-              <li>Active: {active}</li>
-              <li>{activePercentage} %</li>
-            </ul>
-          </div>
-        </div>
+      <div className='stats-wrapper'>
+        <p className='confirmed'>Confirmed: {confirmed}</p>
+        <p className='deaths'>Deaths: {deaths}</p>
+        <p className='deaths last'>{deathsPercentage} %</p>
+        <p className='recovered'>Recovered: {recovered}</p>
+        <p className='recovered last'>{recoveredPercentage} %</p>
+        <p className='active'>Active: {active}</p>
+        <p className='active'>{activePercentage} %</p>
       </div>
     </div>
   );

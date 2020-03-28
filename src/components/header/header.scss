@@ -4,14 +4,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: red;
+  height: 12.5vh;
+  background-color: #0a0e14;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.496);
   .burger-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80px;
-    height: 80px;
+    height: 100%;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 
@@ -19,22 +21,22 @@
       outline: none;
     }
     .burger {
-      width: 50px;
-      height: 6px;
-      background-color: black;
+      width: 40px;
+      height: 3px;
+      background-color: #f2f4f7;
       border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(132, 61, 61, 1);
+
       transition: all 0.5s ease-in-out;
 
       &:before,
       &:after {
         content: '';
         position: absolute;
-        width: 50px;
-        height: 6px;
-        background-color: black;
+        width: 40px;
+        height: 3px;
+        background-color: #f2f4f7;
         border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(132, 61, 61, 1);
+
         transition: all 0.5s ease-in-out;
       }
 
@@ -64,17 +66,19 @@
   .nav-links {
     position: fixed;
     text-align: center;
-    background: #5b78c7;
+    background: #0a0e14;
     height: 100vh;
     width: 100%;
+    padding: 20px;
     flex-direction: column;
     clip-path: circle(2% at 50% -10%);
     -webkit-clip-path: circle(2% at 50% -10%);
     transition: all 1s ease;
     pointer-events: none;
 
-    li {
-      font-size: xx-large;
+    .link {
+      font-size: 1.2rem;
+      margin: 10px 0;
       &:nth-child(1) {
         transition: all 0.5s ease 0.2s;
       }
@@ -84,12 +88,30 @@
       &:nth-child(3) {
         transition: all 0.5s ease 0.6s;
       }
+
+      a {
+        color: #f2f4f7;
+      }
+    }
+
+    .LinksOut {
+      a {
+        color: #0a0e14;
+      }
+    }
+
+    .platformLinks {
+      margin-top: 20px;
+      a {
+        margin: 0 10px;
+      }
     }
 
     &.toggled {
-      clip-path: circle(40% at 50% -10%);
-      -webkit-clip-path: circle(40% at 50% -10%);
-
+      clip-path: circle(50% at 50% -10%);
+      -webkit-clip-path: circle(50% at 50% -10%);
+      // box-shadow: 0 2px 5px rgba(255, 255, 255, 0.36);
+      // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.496);
       pointer-events: all;
     }
   }

@@ -1,3 +1,18 @@
 .footer-container {
-  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 10px 20px;
+
+  .copy {
+    color: #f2f4f7;
+  }
+
+  .links {
+    a {
+      margin: 10px;
+    }
+  }
 }
