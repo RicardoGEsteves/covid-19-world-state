@@ -5,21 +5,34 @@ import './header.scss';
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
-  // const [mobile, setMobile] = useState(false)
+
+  const handleClick = () => setToggle(!toggle);
 
   return (
-    <div className='header-container'>
-      <div className='burger-container' onClick={() => setToggle(!toggle)}>
+    <nav className='header-container'>
+      <div className='burger-container' onClick={handleClick}>
         <span className={!toggle ? 'burger' : 'burger toggled'} />
       </div>
-      {toggle && (
-        <>
-          <Link to='/'>home</Link>
-          <Link to='/countries'>countries</Link>
-          <Link to='/info'>info</Link>
-        </>
-      )}
-    </div>
+      <span className={toggle ? 'menu-overlay' : ''} onClick={handleClick} />
+
+      <ul className={!toggle ? 'nav-links' : 'nav-links toggled'}>
+        <li>
+          <Link to='/' onClick={handleClick}>
+            home
+          </Link>
+        </li>
+        <li>
+          <Link to='/countries' onClick={handleClick}>
+            countries
+          </Link>
+        </li>
+        <li>
+          <Link to='/info' onClick={handleClick}>
+            info
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

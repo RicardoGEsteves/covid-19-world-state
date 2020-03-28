@@ -9,15 +9,15 @@
   grid-template-rows: 1fr 6fr 1fr;
   grid-template-columns: 1fr;
 
-  div:nth-child(1) {
+  .header {
     grid-area: header;
-    background-color: red;
   }
-  div:nth-child(2) {
+  .content {
     grid-area: content;
-    background-color: blue;
+    padding-top: 100px;
   }
-  &:nth-child(3) {
+  .footer {
     grid-area: footer;
+    background-color: green;
   }
 }

@@ -13,15 +13,20 @@ import './app.scss';
 const App = () => {
   return (
     <div className='app-container'>
-      <Header />
-
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route path='/countries' component={CountriesPage} />
-        <Route path='/info' component={InfoPage} />
-      </Switch>
-
-      <Footer />
+      <div className='header'>
+        {' '}
+        <Header />
+      </div>
+      <div className='content'>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/countries' component={CountriesPage} />
+          <Route path='/info' component={InfoPage} />
+        </Switch>
+      </div>
+      <div className='footer'>
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -9,16 +9,20 @@ import './countriesPage.scss';
 
 const CountriesPage = () => {
   const { state, loading, error } = useData(
-    'https://covid19.mathdro.id/api/countries'
+    'https://covid19.mathdro.id/api/confirmed'
   );
 
   const [search, setSearch] = useState('');
 
   const filterCountries =
     !loading &&
-    Object.entries(state.countries).filter(([country]) =>
-      country.toLowerCase().includes(search.toLowerCase())
-    );
+    state
+      .sort((a, b) => b.confirmed - a.confirmed)
+      .filter(el =>
+        el.countryRegion.toLowerCase().includes(search.toLowerCase())
+      );
+
+  console.log('countries', filterCountries);
 
   return (
     <div className='countries-page-container'>
@@ -36,9 +40,14 @@ const CountriesPage = () => {
           </div>
           <ul>
             {!loading &&
-              filterCountries.map(([country]) => (
-                <li key={country}>
-                  <Country country={country} />
+              filterCountries.map((el, index) => (
+                <li key={index}>
+                  <Country
+                    country={el.combinedKey}
+                    confirmed={el.confirmed}
+                    deaths={el.deaths}
+                    recovered={el.recovered}
+                  />
                 </li>
               ))}
           </ul>
