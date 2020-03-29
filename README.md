@@ -1,6 +1,6 @@
 # Covid-19 World State
 
-Check It live at [Covid-19 World State](https://).
+Check It live at [Covid-19 World State](https://ricardogesteves.github.io/covid-19-world-state/).
 
 ## About the project
 
