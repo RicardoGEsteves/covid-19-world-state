@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 
   h1 {
     text-align: center;
@@ -17,15 +18,21 @@
       'confirmed . deaths'
       '. . .'
       'active . recovered';
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.5fr 1fr;
     grid-template-rows: 1fr 0.5fr 1fr;
     padding: 30px 30px 50px;
     background-color: #0a0e14;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.496);
+    width: 100%;
+    margin: 20px 0;
 
     .confirmedWrapper {
       grid-area: confirmed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       h3 {
         color: #ff8f40;
@@ -37,6 +44,10 @@
 
     .deathsWrapper {
       grid-area: deaths;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       h3 {
         color: #ff3333;
@@ -48,6 +59,10 @@
 
     .recoveredWrapper {
       grid-area: recovered;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       h3 {
         color: #c2d94c;
@@ -59,6 +74,10 @@
 
     .activeWrapper {
       grid-area: active;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       h3 {
         color: #ffee99;
@@ -79,6 +98,35 @@
     }
     span {
       color: #f2f4f7;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .home-page-container {
+    h1 {
+      font-size: 4rem;
+    }
+
+    .statsWrapper {
+      h3 {
+        font-size: 3rem;
+      }
+      span {
+        font-size: 1.4rem;
+      }
+    }
+    .dateWrapper {
+      display: flex;
+      flex-direction: row;
+      h5 {
+        font-size: 1rem;
+        margin-right: 15px;
+      }
+      span {
+        font-weight: 300;
+        margin-right: 15px;
+      }
     }
   }
 }

@@ -123,4 +123,76 @@
     width: 100%;
     transition: all 1s ease;
   }
+
+  .desktop-nav-links {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .header-container {
+    height: 12.5vh;
+
+    .burger-container,
+    .menu-overlay,
+    .nav-links,
+    .nav-links.toggled {
+      display: none;
+    }
+
+    .desktop-nav-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      height: 100%;
+
+      .logo-container {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        max-width: 100%;
+
+        img {
+          width: 30%;
+          transition: width 250ms ease-in-out, transform 150ms ease;
+
+          &:hover {
+            width: 35%;
+          }
+        }
+      }
+      .links-container {
+        display: flex;
+        flex: 3;
+        justify-content: flex-end;
+        .nav-link {
+          display: flex;
+          margin-left: 40px;
+
+          a {
+            color: #f2f4f7;
+            border: 1px solid #f2f4f7;
+            border-radius: 30px;
+            padding: 10px;
+            font-size: 0.8rem;
+            transition: background 250ms ease-in-out, transform 150ms ease;
+
+            &:hover,
+            &:focus {
+              color: #0a0e14;
+              border: 1px solid #0a0e14;
+              border-radius: 30px;
+              background-color: #f2f4f7;
+            }
+
+            &:active {
+              transform: scale(0.99);
+            }
+          }
+        }
+      }
+    }
+  }
 }

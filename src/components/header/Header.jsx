@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
+import logo from '../../logo.png';
+
 import './header.scss';
 
 const Header = () => {
@@ -49,6 +51,27 @@ const Header = () => {
             <FaGithub color={toggle ? '#304357' : '#0a0e14'} size='2rem' />
           </a>
         </li>
+      </ul>
+
+      <ul className='desktop-nav-links'>
+        <div className='logo-container'>
+          <Link to='/' onClick={handleClick}>
+            <img src={logo} alt='logo' />
+          </Link>
+        </div>
+
+        <div className='links-container'>
+          <li className='nav-link'>
+            <Link to='/countries' onClick={handleClick}>
+              COUNTRIES
+            </Link>
+          </li>
+          <li className='nav-link'>
+            <Link to='/info' onClick={handleClick}>
+              INFO
+            </Link>
+          </li>
+        </div>
       </ul>
     </nav>
   );

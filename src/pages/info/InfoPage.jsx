@@ -16,12 +16,13 @@ const InfoPage = () => {
           this terrible situation, I think it's up to us to do everything
           possible to avoid the worst, and contribute in the way that we can,
           and this is one of my forms of contribution.
-          <br /> The information nowadays it is everything, and the more there
-          is as long as it is reliably the.
+          <br />
+          The information nowadays it is everything, the more there is as long
+          as it is reliable the better.
         </p>
       </div>
       <div className='other-info'>
-        <p className='info'>Other fonts to get info</p>
+        <p className='info'>More information about coronavirus</p>
         <p className='location'>Worldwide:</p>
         <a
           href='https://www.who.int/emergencies/diseases/novel-coronavirus-2019'

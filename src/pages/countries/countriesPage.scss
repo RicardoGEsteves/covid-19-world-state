@@ -1,6 +1,7 @@
 .countries-page-container {
   display: flex;
   padding-top: 15vh;
+  height: 100%;
 
   .countries-page-wrapper {
     display: flex;
@@ -32,7 +33,7 @@
         margin-left: 10px;
         background: none;
         border: none;
-        border-bottom: 2px solid #f2f4f7;
+        border-bottom: 1px solid #f2f4f7;
         color: #f2f4f7;
         font-family: 'Lato', sans-serif;
         font-weight: 600;
@@ -50,12 +51,44 @@
       justify-content: center;
       align-items: center;
       .country-wrapper {
+        width: 100%;
         padding: 15px;
         border-radius: 15px;
-        margin: 20px;
+        margin: 20px 0;
         background-color: #0a0e14;
         border-radius: 15px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.496);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .countries-page-container {
+    .countries-page-wrapper {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      .title-wrapper {
+        .title {
+          font-size: 2rem;
+          font-weight: 600;
+          letter-spacing: 0.3rem;
+        }
+        .sub-title {
+          font-size: 1.2rem;
+          font-weight: 300;
+          letter-spacing: 0.3rem;
+        }
+      }
+      .search-container {
+        margin: 70px 0;
+      }
+      .countries-container {
+        .country-wrapper {
+          width: auto;
+          margin: 20px;
+        }
       }
     }
   }
