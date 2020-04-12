@@ -16,6 +16,12 @@
     height: 100%;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    background-image: none;
+
+    &:-moz-focus-inner {
+      border: none;
+    }
 
     &:focus {
       outline: none;
@@ -76,9 +82,19 @@
     transition: all 1s ease;
     pointer-events: none;
 
+    &:-moz-focus-inner {
+      border: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
     .link {
       font-size: 1.2rem;
       margin: 10px 0;
+      -webkit-tap-highlight-color: transparent;
+      background-image: none;
       &:nth-child(1) {
         transition: all 0.5s ease 0.2s;
       }
